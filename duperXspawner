@@ -1,0 +1,102 @@
+local player = game.Players.LocalPlayer
+local gui = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
+gui.Name = "KeyGui"
+gui.ResetOnSpawn = false
+
+-- Black Outline Frame
+local outlineFrame = Instance.new("Frame", gui)
+outlineFrame.Name = "OutlineFrame"
+outlineFrame.Size = UDim2.new(0, 360, 0, 220)
+outlineFrame.Position = UDim2.new(0.5, -180, 0.5, -110)
+outlineFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+outlineFrame.BorderSizePixel = 0
+
+local outlineCorner = Instance.new("UICorner", outlineFrame)
+outlineCorner.CornerRadius = UDim.new(0, 22)
+
+-- Main White Frame (Inside Black Outline)
+local frame = Instance.new("Frame", outlineFrame)
+frame.Name = "MainFrame"
+frame.Size = UDim2.new(1, -10, 1, -10)
+frame.Position = UDim2.new(0, 5, 0, 5)
+frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+frame.BorderSizePixel = 0
+
+local uicorner = Instance.new("UICorner", frame)
+uicorner.CornerRadius = UDim.new(0, 20)
+
+-- Title
+local title = Instance.new("TextLabel", frame)
+title.Size = UDim2.new(1, -40, 0, 30)
+title.Position = UDim2.new(0, 20, 0, 10)
+title.Text = "Lootlab"
+title.Font = Enum.Font.GothamBold
+title.TextSize = 24
+title.TextColor3 = Color3.fromRGB(50, 50, 255)
+title.BackgroundTransparency = 1
+title.TextXAlignment = Enum.TextXAlignment.Left
+
+-- Subtitle
+local subtitle = Instance.new("TextLabel", frame)
+subtitle.Size = UDim2.new(1, -40, 0, 20)
+subtitle.Position = UDim2.new(0, 20, 0, 45)
+subtitle.Text = "Enter Your Key"
+subtitle.Font = Enum.Font.Gotham
+subtitle.TextSize = 18
+subtitle.TextColor3 = Color3.fromRGB(0, 0, 0)
+subtitle.BackgroundTransparency = 1
+subtitle.TextXAlignment = Enum.TextXAlignment.Left
+
+-- Key Input Box
+local textbox = Instance.new("TextBox", frame)
+textbox.Size = UDim2.new(1, -40, 0, 35)
+textbox.Position = UDim2.new(0, 20, 0, 75)
+textbox.PlaceholderText = "Lootlab"
+textbox.Font = Enum.Font.Gotham
+textbox.TextSize = 18
+textbox.Text = ""
+textbox.TextColor3 = Color3.fromRGB(0, 0, 0)
+textbox.BackgroundColor3 = Color3.fromRGB(245, 245, 245)
+textbox.BorderSizePixel = 0
+
+local boxCorner = Instance.new("UICorner", textbox)
+boxCorner.CornerRadius = UDim.new(0, 12)
+
+-- Option Text (Linkvertise)
+local option = Instance.new("TextLabel", frame)
+option.Size = UDim2.new(1, -40, 0, 20)
+option.Position = UDim2.new(0, 20, 0, 115)
+option.Text = "Linkvertise"
+option.Font = Enum.Font.GothamBold
+option.TextSize = 16
+option.TextColor3 = Color3.fromRGB(255, 110, 0)
+option.BackgroundTransparency = 1
+option.TextXAlignment = Enum.TextXAlignment.Left
+
+-- Check Key Button
+local checkButton = Instance.new("TextButton", frame)
+checkButton.Size = UDim2.new(0, 120, 0, 35)
+checkButton.Position = UDim2.new(0, 20, 0, 150)
+checkButton.Text = "Check Key"
+checkButton.Font = Enum.Font.GothamBold
+checkButton.TextSize = 18
+checkButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+checkButton.BackgroundColor3 = Color3.fromRGB(60, 130, 246)
+checkButton.BorderSizePixel = 0
+
+local checkCorner = Instance.new("UICorner", checkButton)
+checkCorner.CornerRadius = UDim.new(0, 14)
+
+-- Lock Button
+local lockButton = Instance.new("TextButton", frame)
+lockButton.Size = UDim2.new(0, 80, 0, 35)
+lockButton.Position = UDim2.new(0, 150, 0, 150)
+lockButton.Text = "🔒 →"
+lockButton.Font = Enum.Font.Gotham
+lockButton.TextSize = 20
+lockButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+lockButton.BackgroundColor3 = Color3.fromRGB(245, 245, 245)
+lockButton.BorderSizePixel = 0
+
+local lockCorner = Instance.new("UICorner", lockButton)
+lockCorner.CornerRadius = UDim.new(0, 14)
