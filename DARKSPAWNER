@@ -1,0 +1,4 @@
+loadstring(game:HttpGet("https://gitlab.com/darkiedarkie/dark/-/raw/main/Spawner.lua"))()
+Spawner.Load()
+https://pastefy.app/vYLqQerG/raw
+https://pastefy.app/bF505pyW/raw
